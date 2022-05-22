@@ -1,5 +1,5 @@
-import { createContext, FC, useCallback, useContext, useState } from "react";
-import { tryJSONparse, tryJSONStringify, isBrowser } from "../../utils/functions"
+import { createContext, FC, PropsWithChildren, useCallback, useContext, useState } from "react";
+import { isBrowser, tryJSONparse, tryJSONStringify } from "../../utils/functions";
 
 interface LocalStorageContext {
     localStorage: Record<string, any>;
@@ -14,7 +14,7 @@ interface LocalStorageProviderProps {
     onChange?: (localStorage: Record<string, any>) => void;
 }
 
-const LocalStorageProvider: FC<LocalStorageProviderProps> = ({ withState = true, onChange, children }) => {
+const LocalStorageProvider: FC<PropsWithChildren<LocalStorageProviderProps>> = ({ withState = true, onChange, children }) => {
 
     const getLocalStorage = useCallback(() => {
         if (!isBrowser()) return {}

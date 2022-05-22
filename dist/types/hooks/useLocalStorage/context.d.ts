@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 interface LocalStorageContext {
     localStorage: Record<string, any>;
     getItem: (key: string) => any;
@@ -13,6 +13,6 @@ interface LocalStorageProviderProps {
     withState?: boolean;
     onChange?: (localStorage: Record<string, any>) => void;
 }
-declare const LocalStorageProvider: FC<LocalStorageProviderProps>;
+declare const LocalStorageProvider: FC<PropsWithChildren<LocalStorageProviderProps>>;
 export declare const useLocalStorageContext: () => LocalStorageContext;
 export default LocalStorageProvider;

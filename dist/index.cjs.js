@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var jsxRuntime = require('react/jsx-runtime');
 var react = require('react');
 
-/*! *****************************************************************************
+/******************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
@@ -115,7 +115,7 @@ var LocalStorageProvider = function (_a) {
             getItem: getItem,
             setItem: setItem,
             removeItem: removeItem
-        } }, { children: children }), void 0));
+        } }, { children: children })));
 };
 var useLocalStorageContext = function () {
     var context = react.useContext(LocalStorageContext);
