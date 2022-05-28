@@ -1,7 +1,7 @@
 {
   "name": "@reactivers/use-local-storage",
   "description": "Local Storage management in React with hook and context.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "hooks",
     "react",
